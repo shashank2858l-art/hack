@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student AI Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-base-200 flex flex-col">
+  <!-- Navbar -->
+  <div class="navbar bg-base-100 shadow-xl">
+    <div class="flex-1 px-4">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        Student AI Assistant
+      </h1>
+    </div>
+    <button id="logout" class="btn btn-ghost">Logout</button>
+  </div>
+
+  <div class="flex-1 flex overflow-hidden">
+    <!-- Sidebar -->
+    <div class="w-80 bg-base-300 p-6 overflow-y-auto hidden md:block">
+      <h2 class="text-xl font-bold mb-4">Quick Tips</h2>
+      <div class="space-y-3 text-sm">
+        <div class="alert alert-info">Upload notes → Ask to summarize</div>
+        <div class="alert alert-success">Say "Make study plan for exams"</div>
+        <div class="alert alert-warning">Take photo of question → Get solution</div>
+      </div>
+    </div>
+
+    <!-- Chat -->
+    <div class="flex-1 flex flex-col">
+      <div id="chat" class="flex-1 overflow-y-auto p-6 space-y-6"></div>
+
+      <!-- Input -->
+      <div class="p-4 bg-base-100 border-t">
+        <div class="flex gap-2 max-w-4xl mx-auto">
+          <input type="text" id="message" placeholder="Ask anything, upload file, or use voice/camera..." class="input input-bordered flex-1"/>
+          <label class="btn btn-square"><input type="file" id="fileInput" class="hidden" multiple accept=".pdf,.txt,.jpg,.png,.jpeg"/>📎</label>
+          <button id="voiceBtn" class="btn btn-square">🎤</button>
+          <button id="cameraBtn" class="btn btn-square">📸</button>
+          <button id="sendBtn" class="btn btn-primary px-8">Send</button>
+        </div>
+        <video id="camera" class="hidden mt-4 rounded-xl mx-auto max-w-sm" autoplay></video>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>

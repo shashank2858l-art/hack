@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Student AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="min-h-screen bg-base-200 flex items-center justify-center">
+  <div class="card w-96 bg-base-100 shadow-2xl">
+    <div class="card-body">
+      <h2 class="card-title text-3xl justify-center mb-6">Join Student AI ✨</h2>
+      <input type="email" id="email" placeholder="Email" class="input input-bordered w-full" value="Shashank.shendre1@gmail.com"/>
+      <input type="password" id="password" placeholder="Password (min 6 chars)" class="input input-bordered w-full mt-4"/>
+      <button id="loginBtn" class="btn btn-success w-full mt-6">Create Account</button>
+      <p class="text-center mt-6 text-sm">
+        Already have account? <a href="login.html" class="link link-primary">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Fixed path: now correctly points one level up -->
+  <script type="module" src="../js/auth.js"></script>
+</body>
+</html>
