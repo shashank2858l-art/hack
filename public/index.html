@@ -13,22 +13,22 @@
       Student AI Assistant
     </h1>
     <p class="text-xl text-gray-700 mb-8">Your personal academic superpower</p>
-    <!-- Fixed paths: removed leading / so it works with Live Server -->
-    <a href="../src/auth/login.html" class="btn btn-primary btn-lg text-xl px-10">Get Started →</a>
+    <!-- DEPLOY-FRIENDLY PATH -->
+    <a href="src/auth/login.html" class="btn btn-primary btn-lg text-xl px-10">Get Started →</a>
   </div>
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 
-    // Replace this with your real Firebase config from firebase.js
     const firebaseConfig = {
-      apiKey: "YOUR_REAL_API_KEY_HERE",
-      authDomain: "your-project.firebaseapp.com",
-      projectId: "your-project",
-      storageBucket: "your-project.appspot.com",
-      messagingSenderId: "123456789",
-      appId: "1:123456789:web:abcdef123456"
+      apiKey: "AIzaSyAELQdb0WKFbDF7kRV8iFB3EEuxTcbJSx4",
+      authDomain: "hack-8eb52.firebaseapp.com",
+      projectId: "hack-8eb52",
+      storageBucket: "hack-8eb52.firebasestorage.app",
+      messagingSenderId: "254552060276",
+      appId: "1:254552060276:web:278e9f2317f6847daf3c21",
+      measurementId: "G-HMPSKYJ6T7"
     };
 
     const app = initializeApp(firebaseConfig);
@@ -36,8 +36,7 @@
     
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        // Also fixed path here
-        location.href = "../src/dashboard/index.html";
+        location.href = "src/dashboard/index.html";  // DEPLOY-FRIENDLY PATH
       }
     });
   </script>
