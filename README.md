@@ -9,7 +9,8 @@ An AI-powered academic helper with:
 
 ## Setup
 1. `npm install`
-2. Get Firebase config → replace in `src/js/firebase.js`
+2. Get Firebase config → https://firebase.Google.com  replace in `src/js/firebase.js`
 3. Get Gemini API key → https://aistudio.google.com/app/apikey → replace in `src/js/gemini.js`
 
 4. `Use VS Code:` Open VS Code, install the Live Server extension, locate and point to `public/index.html`, and then click 'Go Live'. 
+
