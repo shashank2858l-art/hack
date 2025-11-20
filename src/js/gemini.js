@@ -1,5 +1,5 @@
 export async function callGemini(prompt, files = []) {
-  const GEMINI_API_KEY = "AIzaSyBsKNIhXHBMg_ydovnTZErl1hG0Jh3ayYQ";
+  const GEMINI_API_KEY = "Add genimi api here";
 
   let parts = [{ text: `You are an expert academic assistant. Help the student with summaries, study plans, doubt clearing, and explanations.\n\nUser: ${prompt}` }];
 
@@ -38,4 +38,5 @@ function fileToBase64(file) {
     reader.onload = () => resolve(reader.result);
     reader.onerror = error => reject(error);
   });
+
 }
